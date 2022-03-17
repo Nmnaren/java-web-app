@@ -7,7 +7,7 @@ pipeline {
     stage('Scan') {
       steps {
         withSonarQubeEnv(installationName: 'sq1') { 
-          sh './mvnw clean verify sonar:sonar -Dsonar.projectKey=jenkins-sonar"'
+          sh './mvnw clean verify sonar:sonar -Dsonar.projectKey=jenkins-sonar'
         }
       }
     }
